@@ -1,19 +1,21 @@
 .article {
   display: flex;
-  // flex-direction: column;
+  flex-direction: column;
   align-items: center;
   width: 40vw;
-  height: 360px;
+  // height: 360px;
   border: 1px solid black;
   border-radius: 20px;
+  cursor: pointer;
 }
 
 .article-img {
-  // width: 90%;
+  width: 50%;
   // height: 200px;
 }
 
 .article-details {
   display: flex;
-  justify-content: space-around;
+  width: 70%;
+  justify-content: space-between;
 }

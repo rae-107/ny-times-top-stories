@@ -7,14 +7,17 @@ nav h1 {
   font-size: 36px;
 }
 
-ul {
+.sub-topics {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
-li {
-  list-style: none;
+.sub-topics button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   margin: 5px;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
 }/*# sourceMappingURL=Header.css.map */
