@@ -10,22 +10,19 @@ export const App = () => {
   const [section, setSection] = useState("home");
   const [error, setError] = useState('')
 
-  const fetchData = async () => {
-    const data = await getStories();
+  const fetchData = async (path) => {
+    const data = await getStories(path);
     console.log(data)
-    if (typeof data === 'string') {
-      setError(data)
-    } else {
-      setStories(data.results);
-      setNumResults(data.num_results);
-      setSection(data.section);
-    }
+
+    setStories(data.results);
+    setNumResults(data.num_results);
+    
   };
 
   useEffect(() => {
-    fetchData();
+    fetchData(section);
     console.log(stories, numResults, section);
-  }, []);
+  }, [section]);
 
   return (
     <Routes>

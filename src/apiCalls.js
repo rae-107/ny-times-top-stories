@@ -1,6 +1,6 @@
-export const getStories = async() => {
+export const getStories = async(path) => {
   try {
-    const res = await fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_API_KEY}`)
+    const res = await fetch(`https://api.nytimes.com/svc/topstories/v2/${path}.json?api-key=${process.env.REACT_APP_API_KEY}`)
     const data = await res.json()
     return data
   } catch(error) {
