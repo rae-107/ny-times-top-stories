@@ -1,16 +1,11 @@
 nav {
   text-align: center;
-  h1 {
-    margin: 0;
-    padding: 10px;
-    font-size: 36px;
-  }
-  
-  h2 {
-    
-  }
 }
-
+nav h1 {
+  margin: 0;
+  padding: 10px;
+  font-size: 36px;
+}
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -21,4 +16,4 @@ li {
   list-style: none;
   margin: 5px;
   cursor: pointer;
-}
+}/*# sourceMappingURL=Header.css.map */
