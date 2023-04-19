@@ -1,0 +1,19 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  border: 1px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.article-img {
+  width: 50%;
+}
+
+.article-details {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}/*# sourceMappingURL=ArticleCard.css.map */
