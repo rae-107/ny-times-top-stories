@@ -1,7 +1,12 @@
-@use '../../../abstract/variables' as *;
-
 main {
   width: 100vw;
   height: 100vh;
-  background-color: $grey;
+  background-color: gray;
+  overflow-y: scroll;
+}
+
+.articles-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
 }

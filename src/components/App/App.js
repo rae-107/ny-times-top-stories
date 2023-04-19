@@ -26,7 +26,7 @@ export const App = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Home setSection={setSection} />} />
+      <Route path="/" element={<Home stories={stories} setSection={setSection} />} />
     </Routes>
   );
 };
