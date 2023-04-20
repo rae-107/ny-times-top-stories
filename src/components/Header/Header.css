@@ -1,10 +1,15 @@
 nav {
   text-align: center;
+  background-color: rgb(200, 199, 199);
+  margin-bottom: 20px;
 }
 nav h1 {
   margin: 0;
   padding: 10px;
   font-size: 36px;
+}
+nav img {
+  width: 30px;
 }
 
 .sub-topics {
