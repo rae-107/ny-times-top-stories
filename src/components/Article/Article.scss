@@ -1,10 +1,39 @@
+@use "../../abstract/variables" as *;
+
 .article-container {
- display: flex;
- flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.large-article-container {
+  // background-color: $grey;
+  // width: 80vw;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details {
+  width: 60vw;
+}
+
+.large-article-title {
+  font-size: 30px;
 }
 
 .large-article-img {
   width: 90vw;
+  // border-radius: 20px;
+}
 
+.article-url {
+  text-decoration: none;
+  background-color: $grey;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
 }
