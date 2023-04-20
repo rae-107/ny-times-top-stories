@@ -3,27 +3,56 @@ nav {
   background-color: rgb(200, 199, 199);
   margin-bottom: 20px;
 
-  h1 {
-    margin: 0;
-    padding: 10px;
-    font-size: 36px;
+  h2 {
+    margin-top: 5px;
+    margin-bottom: 15px;
   }
+}
 
-  img {
-    width: 30px;
-  }
+.top-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header-title {
+  margin: 5px;
+  padding: 10px;
+  font-size: 36px;
+}
+
+.home-button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 .sub-topics {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+
   button {
     appearance: none;
     margin: 5px;
     border: none;
     background-color: transparent;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header-title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 389px) {
+  .header-title {
+    font-size: 26px;
   }
 }
