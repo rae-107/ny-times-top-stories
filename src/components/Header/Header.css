@@ -8,6 +8,9 @@ nav h1 {
   padding: 10px;
   font-size: 36px;
 }
+nav img {
+  width: 30px;
+}
 
 .sub-topics {
   display: flex;

@@ -9,13 +9,15 @@ export const App = () => {
   const [stories, setStories] = useState([]);
   const [numResults, setNumResults] = useState(0);
   const [section, setSection] = useState("home");
-  const [currentArticle, setCurrentArticle] = useState({})
+  const [currentArticle, setCurrentArticle] = useState({});
+  const [loadingData, setLoadingData] = useState(true);
   // const [error, setError] = useState('')
 
   const fetchData = async (path) => {
     const data = await getStories(path);
     setStories(data.results);
     setNumResults(data.num_results);
+    setLoadingData(false);
   };
 
   useEffect(() => {
@@ -26,7 +28,16 @@ export const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home setCurrentArticle={setCurrentArticle} setSection={setSection} stories={stories} fetchData={fetchData} section={section} />} />
-      <Route path="/:subTopic" element={<Home setCurrentArticle={setCurrentArticle} setSection={setSection} stories={stories} fetchData={fetchData} section={section}  />} />
+      <Route path="/:subTopic" element={<Home setCurrentArticle={setCurrentArticle} setSection={setSection} stories={stories} fetchData={fetchData} section={section} />} />
+      <Route path='/:subTopic/:id'  element={
+        <Article 
+          stories={stories} 
+          fetchData={fetchData} 
+          loadingData={loadingData}
+          section={section} 
+          setSection={setSection} 
+        />
+      } />
 
     </Routes>
   );

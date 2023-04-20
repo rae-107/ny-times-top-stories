@@ -6,6 +6,12 @@ export const Header = ({ setSection }) => {
   return (
     <nav>
       <h1>The New York Times</h1>
+
+      <img className="home-button" src="/assets/home-stencil.png" onClick={() => {
+          setSection("home")
+          navigate('/home')
+      }} />
+
       <h2>Top Stories</h2>
       <div className="sub-topics">
         <button onClick={() => {
@@ -38,7 +44,7 @@ export const Header = ({ setSection }) => {
       }}>Health</button>
         <button onClick={() => {
           setSection("home")
-          navigate('/')
+          navigate('/home')
       }}>Home</button>
         <button onClick={() => {
           setSection("insider")
