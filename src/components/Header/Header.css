@@ -1,5 +1,7 @@
 nav {
   text-align: center;
+  background-color: rgb(200, 199, 199);
+  margin-bottom: 20px;
 }
 nav h1 {
   margin: 0;
