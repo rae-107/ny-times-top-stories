@@ -10,6 +10,7 @@ export const Header = ({ setSection }) => {
         <img
           className="home-button"
           src="/assets/home-stencil.png"
+          alt="Click to return to the home page."
           onClick={() => {
             setSection("home");
             navigate("/home");

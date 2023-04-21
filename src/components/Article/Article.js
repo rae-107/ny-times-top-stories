@@ -28,7 +28,6 @@ export const Article = ({
   let articleCaption;
 
   if (article.multimedia) {
-    console.log(article.multimedia);
     articleImg = article.multimedia[0].url;
     articleCaption = article.multimedia[0].caption;
   } else {
@@ -50,8 +49,8 @@ export const Article = ({
               <p>{article.published_date}</p>
             </div>
             <div className="img-container">
-              <img className="large-article-img" src={articleImg} />
-              <p className="article-caption">* {articleCaption}</p>
+              <img className="large-article-img" alt={article.title} src={articleImg} />
+              {articleCaption && <p className="article-caption">* {articleCaption}</p>}
             </div>
             <p>{article.byline}</p>
             <a className="article-url" target="_blank" href={article.url}>

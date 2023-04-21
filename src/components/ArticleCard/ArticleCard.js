@@ -12,7 +12,7 @@ export const ArticleCard = ({
   const navigate = useNavigate();
   return (
     <section onClick={() => navigate(`/${subTopic}/${id}`)} className="article">
-      <img className="article-img" src={img} />
+      <img className="article-img" alt={`Click to read ${title} article`} src={img} />
       <h2>{title}</h2>
       <div className="article-details">
         <p>{published_date}</p>
