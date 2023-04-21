@@ -25,9 +25,12 @@ export const Article = ({
   }, [loadingData]);
 
   let articleImg;
+  let articleCaption;
 
   if (article.multimedia) {
+    console.log(article.multimedia);
     articleImg = article.multimedia[0].url;
+    articleCaption = article.multimedia[0].caption;
   } else {
     articleImg = "/assets/no-photos.png";
   }
@@ -38,15 +41,22 @@ export const Article = ({
       {!loadingData && (
         <section className="article-container">
           <Header setSection={setSection} />
-          <div className="large-article-container" >
-            <div className="details" >
-              <h2 className="large-article-title"><em>{article.title}</em></h2>
+          <div className="large-article-container">
+            <div className="details">
+              <h2 className="large-article-title">
+                <em>{article.title}</em>
+              </h2>
               <p>{article.abstract}</p>
+              <p>{article.published_date}</p>
             </div>
-            <img className="large-article-img" src={articleImg} />
+            <div className="img-container">
+              <img className="large-article-img" src={articleImg} />
+              <p className="article-caption">* {articleCaption}</p>
+            </div>
             <p>{article.byline}</p>
-            <p>{article.published_date}</p>
-            <a className="article-url" href={article.url}>See Full Article Here</a>
+            <a className="article-url" target="_blank" href={article.url}>
+              See Full Article Here
+            </a>
           </div>
         </section>
       )}

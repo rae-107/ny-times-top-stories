@@ -10,6 +10,7 @@
   cursor: pointer;
   color: black;
   background-color: rgb(200, 199, 199);
+  margin: 20px 0;
 }
 
 .article-img {

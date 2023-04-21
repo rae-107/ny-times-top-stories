@@ -6,7 +6,7 @@ export const Header = ({ setSection }) => {
   return (
     <nav>
       <div className="top-header">
-        <h1 className="header-title">The New York Times</h1>
+        <h1 className="header-title"><em>The New York Times</em></h1>
         <img
           className="home-button"
           src="/assets/home-stencil.png"

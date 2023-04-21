@@ -4,6 +4,7 @@ import { getStories } from "../../apiCalls";
 import { useEffect, useState } from "react";
 import { Home } from "../Home/Home";
 import "./App.css";
+import { cleanData } from "../../util";
 
 export const App = () => {
   const [stories, setStories] = useState([]);
@@ -14,7 +15,7 @@ export const App = () => {
 
   const fetchData = async (path) => {
     const data = await getStories(path);
-    setStories(data.results);
+    setStories(cleanData(data.results));
     setNumResults(data.num_results);
     setLoadingData(false);
   };
