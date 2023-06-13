@@ -1,10 +1,50 @@
+@use "../../abstract/variables" as *;
+
 .article-container {
- display: flex;
- flex-direction: column;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.large-article-container {
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details {
+  width: 60vw;
+}
+
+.large-article-title {
+  font-size: 30px;
+}
+
+.img-container {
+  width: 90vw;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .large-article-img {
   width: 90vw;
+}
 
+.article-caption {
+  margin: 0;
+  position: absolute;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.article-url {
+  text-decoration: none;
+  background-color: $grey;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+  margin: 16px 0;
 }

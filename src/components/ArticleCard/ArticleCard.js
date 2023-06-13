@@ -1,17 +1,23 @@
 import "./ArticleCard.css";
-import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
-export const ArticleCard = ({ id, stories, setCurrentArticle, img, subTopic, title, byline, published_date }) => {
+export const ArticleCard = ({
+  id,
+  img,
+  subTopic,
+  title,
+  byline,
+  published_date,
+}) => {
+  const navigate = useNavigate();
   return (
-    <Link onClick={() => setCurrentArticle(stories[id]) } style={{ textDecoration: 'none' }} to={`/${subTopic}/${id}`}>
-    <section className="article" >
-      <img className="article-img" src={img} />
+    <section onClick={() => navigate(`/${subTopic}/${id}`)} className="article">
+      <img className="article-img" alt={`Click to read ${title} article`} src={img} />
       <h2>{title}</h2>
-      <div className="article-details" >
-        <p>{byline}</p>
+      <div className="article-details">
         <p>{published_date}</p>
+        <p>{byline}</p>
       </div>
     </section>
-    </Link>
   );
 };
